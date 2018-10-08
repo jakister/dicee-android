@@ -2,4 +2,7 @@
     <string name="app_name">Dicee</string>
     <string name="button_text">Roll</string>
     <string name="button_description">Rolls the dice</string>
+    <string name="cd_logo">Casino Logo</string>
+    <string name="cd_left_dice">Left Dice Image</string>
+    <string name="cd_right_dice">Right Dice Image</string>
 </resources>

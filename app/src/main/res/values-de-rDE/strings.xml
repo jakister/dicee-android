@@ -3,4 +3,7 @@
     <string name="app_name">Dicee</string>
     <string name="button_text">Würfeln</string>
     <string name="button_description">Rollt die Würfel</string>
+    <string name="cd_logo">Casino Logo</string>
+    <string name="cd_left_dice">Bild vom linken Würfel</string>
+    <string name="cd_right_dice">Bild vom rechten Würfel</string>
 </resources>

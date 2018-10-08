@@ -13,18 +13,21 @@
 
     <ImageView
         android:id="@+id/image_logo"
-        android:layout_width="wrap_content"
-
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/image_leftDice"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_rightLogo"
-        app:layout_constraintStart_toStartOf="@+id/guideline_leftLogo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dicee_logo" />
 
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_rightDice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dicee_logo"
+        android:contentDescription="@string/cd_logo"/>
+
+    <!--0dp means match_constraint-->
 
     <ImageView
         android:id="@+id/image_leftDice"
@@ -32,12 +35,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/image_rightDice"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/image_rightDice"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dice2" />
+        app:srcCompat="@drawable/dice2"
+        android:contentDescription="@string/cd_left_dice"/>
 
     <ImageView
         android:id="@+id/image_rightDice"
@@ -45,12 +49,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        app:layout_constraintBottom_toBottomOf="parent"
 
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_leftDice"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dice1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_leftDice"
+        app:srcCompat="@drawable/dice1"
+        android:contentDescription="@string/cd_right_dice"/>
 
 
     <Button
@@ -59,32 +65,18 @@
 
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
 
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
+        app:layout_goneMarginRight="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/button_description"
         android:text="@string/button_text"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_rightLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.90" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_leftLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.10" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Left/ Right Syntax is deprecated and is ignored by Android. Only Start/ End works now. -->
 
